@@ -16,6 +16,26 @@ function Profile() {
   const navigate = useNavigate();
   const { posts, uploadPost } = useContext(ContextStore);
 
+  const friends = [
+    {
+      img: "/images/profile.jpg",
+    },
+    {
+      img: "/images/profile1.jpg",
+    },
+    {
+      img: "/images/profile2.jpg",
+    },
+    {
+      img: "/images/postprofile1.jpg",
+    },
+    {
+      img: "/images/profile4.jpg",
+    },
+    {
+      img: "/images/postprofile2.jpg",
+    },
+  ];
   const contact = [
     {
       img: "/images/profile.jpg",
@@ -75,7 +95,8 @@ function Profile() {
                 {/* Contacts/Bio Section  */}
                 <div className="lg:flex  hidden mt-2 w-full items-center">
                   {contact.map((e) => (
-                    <img key={v4()}
+                    <img
+                      key={v4()}
                       className="rounded-full lg:-m-0.5 w-8 h-8"
                       src={e.img}
                       alt=""
@@ -90,7 +111,7 @@ function Profile() {
               <div className="flex">
                 {contact.map((e) => (
                   <img
-                  key={v4()}
+                    key={v4()}
                     className="rounded-full lg:-m-1 w-8 h-8"
                     src={e.img}
                     alt=""
@@ -141,7 +162,94 @@ function Profile() {
           </div>
           {/* Post Section  */}
           <div className="w-full gap-4 bg-[#f1f2f6] flex">
-            <div className="w-[40%] hidden lg:flex bg-white">one</div>
+            {/* Column 1 */}
+            <div className="w-[40%] top-0 sticky hidden lg:flex bg-white">
+              <div className="w-[350px] hidden lg:flex flex-col gap-4 sticky top-16 h-fit">
+                {/* Intro Section */}
+                <div className="bg-white shadow rounded-xl p-4">
+                  <h2 className="text-xl font-bold mb-3">Intro</h2>
+                  <ul className="flex flex-col gap-2 text-gray-900 text-sm">
+                    <li>Frontend Developer</li>
+                    <li>CS Noob</li>
+                    <li>
+                      <button className="w-full text-black font-semibold bg-gray-200 text-[15px] cursor-pointer py-2 px-1.5 rounded-md">
+                        Edit Bio
+                      </button>
+                    </li>
+                    <li className="font-medium">Profile · Digital Creator</li>
+                    <li>Better at study</li>
+                    <li>
+                      Went to{" "}
+                      <span className="font-medium">
+                        Info English Grammar School Murad Memon Goth
+                      </span>
+                    </li>
+                    <li>
+                      Studied at{" "}
+                      <span className="font-medium">
+                        Jamia Millia Govt Degree College Morning
+                      </span>
+                    </li>
+                    <li>
+                      Went to{" "}
+                      <span className="font-medium">
+                        Crescent Grammar School
+                      </span>
+                    </li>
+                    <li>
+                      Lives in{" "}
+                      <span className="font-medium">Karachi, Pakistan</span>
+                    </li>
+                    <li>
+                      From <span className="font-medium">Malir</span>
+                    </li>
+                    <li>
+                      Status: <span className="font-medium">Single</span>
+                    </li>
+                    <li>
+                      <a
+                        href="https://youtube.com/@Bekaar%20Boyz"
+                        target="_blank"
+                        className="hover:underline"
+                      >
+                        https://salmanhanif-portfolio.vercel.app/
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://youtube.com/@bekaarboyz?si=Xnz38aMgGeICGrX-"
+                        target="_blank"
+                        className="hover:underline"
+                      >
+                        https://www.linkedin.com/in/salman-hanif
+                      </a>
+                    </li>
+                    <li>
+                      <button className="w-full text-black font-semibold bg-gray-200 text-[15px] cursor-pointer py-2 px-1.5 rounded-md">
+                        Edit Details
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Friends */}
+                <div className="bg-white shadow rounded-xl p-4">
+                  <h2 className="text-xl font-bold mb-3">Friends</h2>
+                  <p className="text-gray-600 text-sm">1,546 friends</p>
+                  <div className="grid grid-cols-3 gap-2 mt-3">
+                    {friends.map((i) => (
+                      <div
+                        key={v4()}
+                        className="bg-gray-200 overflow-hidden h-[90px] rounded-lg flex items-center justify-center text-xs"
+                      >
+                        <img className="w-full" src={i.img} alt="" />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* Column 2 */}
             <div className="lg:w-[60%] w-full bg-white">
               <div className="w-full flex">
                 <main className="w-full lg:py-4 flex flex-col items-center">
@@ -186,7 +294,10 @@ function Profile() {
 
                     {/*                     Posts               */}
                     {posts.map((e) => (
-                      <div key={v4()} className=" w-full gap-2 flex flex-col bg-white py-3.5  rounded-2xl">
+                      <div
+                        key={v4()}
+                        className=" w-full gap-2 flex flex-col bg-white py-3.5  rounded-2xl"
+                      >
                         {/* profile and name */}
                         <div
                           id="profilediv"
@@ -195,12 +306,12 @@ function Profile() {
                           <div className="flex items-center gap-1.5">
                             <div className=" w-11 h-11 overflow-hidden rounded-full">
                               <Link to="/profile">
-                              <img
-                                className="w-full"
-                                src="/images/myprofile.jpg"
-                                alt=""
-                                srcset=""
-                              />
+                                <img
+                                  className="w-full"
+                                  src="/images/myprofile.jpg"
+                                  alt=""
+                                  srcset=""
+                                />
                               </Link>
                             </div>
                             <div className="leading-4">
