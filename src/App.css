@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+.sidebar-scroll {
+  scrollbar-width: thin; 
+  scrollbar-color: transparent transparent;}
+
+.sidebar-scroll:hover {
+  scrollbar-color: rgba(100, 100, 100, 0.8) transparent; 
+}
+
+.sidebar-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidebar-scroll::-webkit-scrollbar-thumb {
+  background-color: transparent; 
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar-scroll:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 100, 100, 0.6); 
+}
+.sidebar-left-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+.sidebar-left-scroll:hover {
+  scrollbar-color: rgba(100, 100, 100, 0.8) transparent;
+}
+
+.sidebar-left-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidebar-left-scroll::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar-left-scroll:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 100, 100, 0.6);
+}
